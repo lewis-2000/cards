@@ -19,18 +19,21 @@ namespace cards.Services
 
         }
 
-        public async Task CreateCard(DiscoverDB discover)
+        //Create to DiscoverDB
+        public async Task CreateDiscoverDB(DiscoverDB discover)
         {
             await _discoverDBCollection.InsertOneAsync(discover);
             return;
         }
 
-        public async Task<List<DiscoverDB>> GetCardDB()
+        //Get the DiscoverDB
+        public async Task<List<DiscoverDB>> GetDiscoverCardDB()
         {
             return await _discoverDBCollection.Find(new BsonDocument()).ToListAsync();
         }
 
-        public async Task AddToCardDB(string id, string purchaseCreditId)
+        //Post to DiscoverDB
+        public async Task AddToDiscoverDB(string id, string purchaseCreditId)
         {
             FilterDefinition<DiscoverDB> filter = Builders<DiscoverDB>.Filter.Eq("Id", id);
             UpdateDefinition<DiscoverDB> update = Builders<DiscoverDB>.Update.AddToSet<string>("items", purchaseCreditId);
@@ -38,7 +41,8 @@ namespace cards.Services
             return;
         }
 
-        public async Task DeleteCardDB(string id)
+        //Delete from DiscoverDB
+        public async Task DeleteDiscoverDB(string id)
         {
             FilterDefinition<DiscoverDB> filter = Builders<DiscoverDB>.Filter.Eq("Id", id);
             await _discoverDBCollection.DeleteOneAsync(filter);

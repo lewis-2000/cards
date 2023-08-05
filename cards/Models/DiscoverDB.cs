@@ -1,8 +1,15 @@
-﻿namespace cards.Models
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System.Text.Json.Serialization;
+
+namespace cards.Models
 {
+    [BsonIgnoreExtraElements]
     public class DiscoverDB
     {
-        public int ProductId { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? ProductId { get; set; }
 
         public string ProductName { get; set; } = null!;
 
@@ -12,9 +19,11 @@
 
         public float CurrentTag { get; set; }
 
+        [BsonElement("items")]
+        [JsonPropertyName("items")]
         public float PreviousTag { get; set; }
 
-        public string SellerReputation { get; set; } = null!;
+        public int SellerReputation { get; set; }
 
     }
 }

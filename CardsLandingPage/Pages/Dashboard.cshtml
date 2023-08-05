@@ -1,0 +1,335 @@
+﻿@page
+@model DashboardModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="Dashboard-container">
+   <aside>
+       <div class="top">
+           <div class="logo">
+                <img src="~/fonts/svgs/home.svg"/> 
+                <h2>Ca<span class="danger">rds</span></h2>
+           </div>
+            <div class="close" id="close-btn">
+                <span class="fa fa-window-close"></span>
+            </div>
+        </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="fa fa-dashboard"></span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#">
+                    <span class="fa-solid fa-cart-shopping"></span>
+                    <h3>Orders</h3>
+                </a>
+
+                <a href="#" class="active">
+                    <span class="fa-solid fa-business-time"></span>
+                    <h3>Analytics</h3>
+                </a>
+
+                <a href="#" >
+                    <span class="fa-solid fa-message"></span>
+                    <h3>Messages</h3>
+                    <span class="message-count">27</span>
+                </a>
+
+                <a href="#">
+                    <span class="fa-solid fa-weight-hanging"></span>
+                    <h3>Products</h3>
+                </a>
+
+                <a href="#">
+                    <span class="fa fa-file"></span>
+                    <h3>Reports</h3>
+                </a>
+
+                <a href="#">
+                    <span class="fa-solid fa-user-gear"></span>
+                    <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="fa fa-plus"></span>
+                    <h3>Add Product</h3>
+                </a>
+
+                <a href="#">
+                    <span class="fa fa-sign-out"></span>
+                    <h3>Logout</h3>
+                </a>
+
+            </div>
+       
+   </aside>
+
+   <!--End Of Sidebar aside Section-->
+
+   <main>
+       <h1>Dashboard</h1>
+       <div class="date">
+           <input type="date" />
+       </div>
+
+       <div class="insights">
+           <div class="sales">
+               <span class="fa fa-chart-bar"></span>
+               <div class="middle">
+                   <div class="left">
+                       <h3>Total Sales</h3>
+                       <h1>25,024£</h1>
+                   </div>
+
+                   <div class="progress">
+                       <svg>
+                           <circle cx="45" cy="55" r="33"></circle>
+                       </svg>
+                       <div class="number">
+                           <p>81%</p>
+                       </div>
+                   </div>
+               </div>
+                <small class="text-muted">Last 24Hours</small>
+           </div>
+
+           <!--End of Sales-->
+
+            <div class="expenses">
+                <span class="fa fa-chart-simple"></span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Total Expenses</h3>
+                        <h1>15,631£</h1>
+                    </div>
+
+                    <div class="progress">
+                        <svg>
+                            <circle cx="45" cy="55" r="33"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>62%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24Hours</small>
+            </div>
+
+            <!--End of Expenses-->
+
+            <div class="income">
+                <span class="fas fa-chart-line chart-icon"></span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Total Income</h3>
+                        <h1>70,122£</h1>
+                    </div>
+
+                    <div class="progress">
+                        <svg>
+                            <circle cx="45" cy="55" r="33"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>44%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24Hours</small>
+            </div>
+
+            <!--End of Income-->
+
+       </div>
+
+       <!--End of insights-->
+
+       <div class="recent-orders">
+           <h2>Recent Orders</h2>
+           <table>
+               <thead>
+                   <tr>
+                       <th>Product Name</th>
+                       <th>Product Number</th>
+                       <th>Payment</th>
+                       <th>Status</th>
+
+                   </tr>
+               </thead>
+
+               <tbody>
+                   <tr>
+                       <td>Samsung Galaxy Phone</td>
+                       <td>836456</td>
+                       <td>Succesful</td>
+                       <td class="warning ">Pending</td>
+                       <td class="primary ">Details</td>
+                   </tr>
+
+                    <tr>
+                       <td> Tecno Phone</td>
+                       <td>836456</td>
+                       <td>Succesful</td>
+                       <td class="warning ">Pending</td>
+                       <td class="primary ">Details</td>
+                   </tr>
+
+                    <tr>
+                       <td>Samsung Galaxy Phone</td>
+                       <td>836456</td>
+                       <td>Succesful</td>
+                       <td class="warning ">Pending</td>
+                       <td class="primary ">Details</td>
+                   </tr>
+
+                    <tr>
+                        <td>Samsung Galaxy Phone</td>
+                        <td>836456</td>
+                        <td>Succesful</td>
+                        <td class="warning ">Pending</td>
+                        <td class="primary ">Details</td>
+                    </tr>
+
+                    <tr>
+                        <td>Samsung Galaxy Phone</td>
+                        <td>836456</td>
+                        <td>Succesful</td>
+                        <td class="warning ">Pending</td>
+                        <td class="primary ">Details</td>
+                    </tr>
+
+               </tbody>
+
+           </table>
+           <a href="#">Show All</a>
+       </div>
+
+   </main>
+
+   <!--===============End of Main===================-->
+
+   <div class="right">
+        <div class="top">
+            <button id="menu-btn" class="fa fa-bars button">
+                 
+            </button>
+            <div class="theme-toggler">
+                <span class="fa fa-sun toggle active"></span>
+                <span class="fa fa-moon toggle"></span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Hey <b>Lewis</b></p>
+                    
+                </div>
+                    <div class="profile-photo">
+                        <img src="~/Images/Food.jpg" alt="profile photo"/>
+                    </div>
+
+            </div>
+        </div>
+
+        <!--End of top-->
+
+        <div class="recent-updates">
+            <div class="updates">
+                <div class="update">
+                    <img src="~/Images/Girl.jpg" />
+                <div class="message">
+                    <p><b>Guerrilla</b> Received his order of samsung Galaxy Phone</p>
+                    <small class="text-muted">2 minutes Ago</small>
+                </div>
+                </div>
+
+                <div class="update">
+                    <img src="~/Images/Girl.jpg" />
+                    <div class="message">
+                        <p><b>Guerrilla</b> Received his order of samsung Galaxy Phone</p>
+                        <small class="text-muted">2 minutes Ago</small>
+                    </div>
+                </div>
+
+                <div class="update">
+                    <img src="~/Images/Girl.jpg" />
+                    <div class="message">
+                        <p><b>Guerrilla</b> Received his order of samsung Galaxy Phone</p>
+                        <small class="text-muted">2 minutes Ago</small>
+                    </div>
+                </div>
+
+                <div class="update">
+                    <img src="~/Images/Girl.jpg" />
+                    <div class="message">
+                        <p><b>Guerrilla</b> Received his order of samsung Galaxy Phone</p>
+                        <small class="text-muted">2 minutes Ago</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--End of Recent Updates-->
+
+        <div class="sales-analytics">
+            <h2>Sales Analytics</h2>
+            <div class="items online">
+                <div class="icon">
+                    <span class="fa fa-shopping-cart"></span>
+                </div>
+
+                <div class="right">
+                    <div class="info">
+                        <h3>ONLINE ORDERS </h3>
+                        <small class="text-muted">24 Hours</small>
+                    </div>
+                    <h5 class="success">+39%</h5>
+                    <h3>3921</h3>
+                </div>
+            </div>
+
+            <div class="items offline">
+                <div class="icon">
+                    <span class="fa fa-store"></span>
+                </div>
+
+                <div class="right">
+                    <div class="info">
+                        <h3>OFFLINE ORDERS </h3>
+                        <small class="text-muted">24 Hours</small>
+                    </div>
+                    <h5 class="danger">-17%</h5>
+                    <h3>1200</h3>
+                </div>
+            </div>
+
+            <div class="items customers">
+                <div class="icon">
+                    <span class="fa fa-person"></span>
+                </div>
+
+                <div class="right">
+                    <div class="info">
+                        <h3>NEW CUSTOMERS </h3>
+                        <small class="text-muted">24 Hours</small>
+                    </div>
+                    <h5 class="success">+25%</h5>
+                    <h3>900</h3>
+                </div>
+            </div>
+
+            <div class="items add-products">
+                <div class="icon">
+                    <span class="fa fa-plus"></span>
+                </div>
+   
+                </div>
+            </div>
+
+        </div>
+
+   </div>
+
+

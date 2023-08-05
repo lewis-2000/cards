@@ -1,13 +1,16 @@
-﻿using CardsLandingPage.Models;
+﻿using CardsLandingPage.DataConnection;
+using CardsLandingPage.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CardsLandingPage.Controllers
 {
     public class CredentialController : Controller
     {
-        public IActionResult Authentication()
+       
+        public async Task<IActionResult> Index()
         {
-            var data = new Credential { name = "test" , password="123456789"};
+            
+           // var data = new Credential { name = "test" , password="123456789"};
             return View();
         }
     }
