@@ -35,7 +35,10 @@ const themeToggler = document.querySelector('.theme-toggler')
 
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
+    console.log("Hit");
 })
+
+
 
 closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';

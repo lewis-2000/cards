@@ -1,22 +1,28 @@
 ﻿using cards.Models;
 using CardsApi;
 using CardsLandingPage.DataConnection;
+using CardsLandingPage.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CardsLandingPage.Controllers
+namespace CardsLandingPage. ControllerBase
 {
+    [Route("[Controller]")]
+    [ApiController]
     public class CardsController : Controller
-    {      
+    {
 
-        public async Task<IActionResult> Index()
+        public IActionResult Get()
         {
-            var httpClient = new HttpClient();
-            var client = new swaggerClient("https://localhost:7018/swagger/v1/swagger.json", httpClient);
-            ViewData["Results"] = await client.CardDBAllAsync();
-            Console.WriteLine(client.CardDBAllAsync());
+            /*  var info = new List<Credential> { 
+                  new Credential{ name="Lewis nganga", password="123456789secure"},
+                  new Credential{ name="Prince mungai", password="123456789maybesecure"}
 
-            return View();
+              };
+            */
+            var info = new Credential { name = "Lewis nganga", password = "123456789secure" };
+            return Ok(info) ;
+
         }
     }
 }

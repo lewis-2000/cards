@@ -91,11 +91,33 @@ body {
         color: #ffffff;
         text-align: left;
     }
+/*==================Landing Page===============*/
 
+.landing-page{
+    background:var(--color-background);
+
+}
+
+.landing-page .login-signup .login-signup-card{
+    width:20rem;
+    height:15rem;
+    top:50%;
+    left:50%;
+    background:red;
+    justify-content:center;
+
+}
 
 
     /*Tabs*/
 
+    [data-tab-content]{
+        display:none;
+    }
+
+    .active[data-tab-content]{
+        display:inline-block;
+    }
 
 
 
@@ -666,7 +688,7 @@ main {
             }
         }
 
-        /*small phnes and tablets*/
+        /*small phones and tablets*/
         @media screen and (max-width:768px){
             .Dashboard-container{
                 width:100%;
@@ -777,3 +799,117 @@ main {
         }
 
 
+        /*========================Shop Tab======================*/
+
+main .shop-container {
+    display: grid;
+    gap: 1.6rem;
+    height: 100vh;
+}
+
+main .shop-container .deal-container{
+    display:flex;
+}
+
+main .shop-container .deal-container .description{
+    left:0;
+    padding:1.8rem;
+}
+
+main .shop-container .deal-container .right{
+    padding:1.8rem;
+    left:100%;
+}
+
+    main .shop-container .shop-item {
+        background: var(--color-white);
+        padding: var(--card-padding);
+        border-radius: var(--card-border-radius);
+        margin-top: 1rem;
+        box-shadow: var(--box-shadow);
+        transition: all 300ms ease;
+    }
+
+main .shop-container .product-item-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+
+}
+
+
+
+/*Dashboard Page on small screens*/
+
+@media screen and (max-width:768px){
+    main .shop-container{
+        grid-template-columns:1fr;
+    }
+
+    main .shop-container .product-item-container{
+        grid-template-columns:1fr;
+
+    }
+}
+
+
+
+
+
+/*=============Messages Tab==================*/
+.right .payment-card-container{
+    background:red;
+    height:100vh;
+}
+
+.right .payment-card-container .payment-card {
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+
+/*Messages Tab*/
+
+main .messages-container{
+    height:100vh;
+    background:transparent;
+}
+
+    main .messages-container .message-actions {
+        position: absolute;
+        bottom: 1.8rem;
+        left:50%;
+        position: center;
+    }
+
+    main .messages-container .active-users{
+        top:0;
+        height:3rem;
+        background:purple;
+    }
+
+    main .messages-container .active-messaging{
+        background:red;
+    }
+
+    main .messages-container .message-actions form{
+        position:center;
+    }
+
+
+main .messages-container .message-actions input[type="text"]{
+    border-radius:var(--card-border-radius);
+    height:1rem;
+}
+
+main .messages-container .message-actions input[type="submit"]{
+    right:0;
+    border-radius:50%;
+}

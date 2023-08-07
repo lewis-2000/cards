@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using CardsLandingPage.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CardsLandingPage.Pages
 {
@@ -12,9 +13,17 @@ namespace CardsLandingPage.Pages
             
         }
 
-        public void OnGet()
-        {
+        public List<Credential> info =  new List<Credential> 
+        { 
+                new Credential{ name="Lewis nganga", password="123456789secure"},
+                new Credential{ name="Prince mungai", password="123456789maybesecure"}
+            
+           };
 
-        }
+
+        public void OnGet()
+                {
+
+                }
     }
 }
