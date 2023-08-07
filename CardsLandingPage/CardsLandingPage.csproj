@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\ShoeShop\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

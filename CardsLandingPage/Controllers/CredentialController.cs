@@ -7,7 +7,7 @@ namespace CardsLandingPage.Controllers
     public class CredentialController : Controller
     {
        
-        public async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
             
            // var data = new Credential { name = "test" , password="123456789"};

@@ -20,32 +20,29 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-@font-face {
-    font-family: 'fontawesome';
-    src: url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-regular-400.ttf') format('truetype'), url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-brands-400.ttf') format('opentype') url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-brands-400.ttf') format('opentype'), url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-solid-900.ttf') format('opentype'), url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-solid-900.woff2') format('woff2'), url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-v4compatibility.ttf') format('opentype'), url('../fonts/fontawesome-free-6.4.2-web/webfonts/fa-v4compatibility.woff2') format('woff2');
-    font-weight: normal;
+/*Dark Theme Variables*/
+.dark-themes-variables {
+    --color-background: #181a1e;
+    --color-dark: #edeffd;
+    --color-white: #202528;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
 }
+
 
 
 * {
     border: 0;
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    appearance: none;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
 }
 
-html {
-    font-size: 14px;
-}
 
 body {
     background: var(--color-background);
+    padding:0;
+    margin:0;
 }
-
 
 
 .content-div {
@@ -95,6 +92,15 @@ body {
         text-align: left;
     }
 
+
+
+    /*Tabs*/
+
+
+
+
+
+
 /*Cards Dashboard*/
 
 .Dashboard-container {
@@ -142,6 +148,7 @@ h2 {
 
 h3 {
     font-size: 0.87rem;
+    
 }
 
 h4 {
@@ -155,6 +162,10 @@ h5 {
 
 small {
     font-size: 0.75rem;
+}
+
+fa{
+    font-size:12px;
 }
 
 .proifle-photo {
@@ -177,24 +188,25 @@ b {
 }
 
 .primary {
-    color: var(--color-primary)
+    color: var(--color-primary);
 }
 
 .success {
-    color: var(--color-success)
+    color: var(--color-success);
 }
 
 .warning {
-    color: var(--color-warning)
+    color: var(--color-warning);
 }
 
 .danger {
-    color: var(--color-danger)
+    color: var(--color-danger);
 }
 
 
 aside {
     height: 100vh;
+
 }
 
     aside .top {
@@ -300,7 +312,7 @@ aside {
 
 /*Main*/
 main {
-    margin-top: 1.4rem;
+    margin-top: 0.8rem;
 }
 
 
@@ -338,7 +350,6 @@ main {
 
             main .insights > div span {
                 background: var(--color-primary);
-                padding: 0.5rem;
                 border-radius: 50%;
                 color: var(--color-white);
             }
@@ -414,7 +425,7 @@ main {
 
         main .insights small {
             display: block;
-            margin-top: 1.6rem;
+            margin-top: 0.6rem;
         }
 
 
@@ -598,3 +609,171 @@ main {
             align-items: center;
             justify-content: center;
         }
+
+        .right .sales-analytics .add-products  div{
+            display:flex;
+            align-items:center;
+            gap:0.6rem;
+        }
+
+        .right .sales-analytics .add-products div h3{
+            font-weight:500;
+        }
+
+
+        /*======Dashboard Media Queries======*/
+        /*Tablets and Small Laptops*/
+        @media screen and (max-width:1200px){
+            .Dashboard-container{
+                width:94%;
+                grid-template-columns:7rem auto 20rem;
+            }
+
+            aside .logo h2{
+                display:none;
+            }
+
+            aside .sidebar h3{
+                display:none;
+            }
+
+            aside .sidebar a{
+                width:5.6rem;
+            }
+
+            aside .sidebar a:last-child{
+                position:relative;
+                margin-top:1.8rem;
+            }
+
+            /*main Middle Section*/
+
+            main .insights{
+                grid-template-columns:1fr;
+                gap:0;
+            }
+
+            main .recent-orders{
+                width:94%;
+                position:absolute;
+                left:50%;
+                transform:translateX(-50%);
+                margin:2rem 0 0 8.8rem;
+            }
+
+            main .recent-orders table{
+                width:83vw;
+            }
+        }
+
+        /*small phnes and tablets*/
+        @media screen and (max-width:768px){
+            .Dashboard-container{
+                width:100%;
+                grid-template-columns:1fr;
+            }
+
+            aside{
+                position:fixed;
+                left: 0;
+                background:var(--color-white);
+                width:18rem;
+                z-index:3;
+                box-shadow:1rem 3rem 4rem var(--color-light);
+                height:100vh;
+                padding-right:var(--card-padding);
+                display:none;
+            }
+            
+            @keyframes showMenu{
+                to{
+                    left:0;
+                }
+            }
+
+            aside .logo{
+                margin-left:1rem;
+            }
+
+            aside .logo h2{
+                display:inline;
+            }
+
+            aside .sidebar h3{
+                display:inline;
+            }
+            aside .sidebar a{
+                width:100%;
+                height:3.4rem;
+            }
+            aside .sidebar a:last-child{
+                position:absolute;
+                bottom:5rem;
+            }
+
+            aside .close{
+                display:inline-block;
+                cursor:pointer;
+            }
+
+            main{
+                margin-top:8rem;
+                padding:0 1rem;
+
+            }
+
+            main .recent-orders{
+                position:relative;
+                margin: 3rem 0 0 0;
+                width:100%;
+
+            }
+
+            main .recent-orders table{
+                width:100%;
+                margin:0;
+            }
+
+
+            .right{
+                width:94%;
+                margin:0 auto 4rem;
+
+            }
+
+            .right .top{
+                position:fixed;
+                top:0;
+                left:0;
+                align-items:center;
+                padding:0 0.8rem;
+                height:4.6rem;
+                background:var(--color-white);
+                width:100%;
+                margin:0;
+                z-index:2;
+                box-shadow:0 1rem 1rem var(--color-light);
+            }
+
+            .right .top .theme-toggler{
+                width:4.4rem;
+                position:absolute;
+                left:66%;
+
+            }
+
+            .right .profile .info{
+                display:none;
+            }
+
+            .right .top .button{
+                display:inline-block;
+                cursor:pointer;
+                color:var(--color-dark);
+                position:absolute;
+                left:1rem;
+                font-size:2rem;
+            }
+        }
+
+
