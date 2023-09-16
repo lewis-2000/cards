@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace cards.Models
 {
+    [BsonIgnoreExtraElements]
     public class CardDB
     {
         public string Name { get; set; } = null!;
@@ -22,7 +23,7 @@ namespace cards.Models
 
         [BsonElement("items")]
         [JsonPropertyName("items")]
-        public List<string> ItemId { get; set; } = null!;
+        public List<string> items { get; set; } = null!;
 
         public double Credit { get; set; }
 

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cards</name>
+    </assembly>
+    <members>
+        <member name="M:cards.Controllers.CardDBController.GetCards">
+            <summary>
+            Return all CardDB Items
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.CardDBController.AddCard(cards.Models.CardDB)">
+            <summary>
+            Creates a card to the CardDB with a unique id
+            </summary>
+            <param name="card"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.CardDBController.DeleteCard(System.String)">
+            <summary>
+            Deletes a card to the cardDB using a specific id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.CardDBController.AddToCards(System.String,System.String)">
+            <summary>
+            Appends items to a card using a specific id
+            </summary>
+            <param name="id"></param>
+            <param name="cardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.DiscoverDBController.GetDiscoverDB">
+            <summary>
+            Gets all DiscoverDB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.DiscoverDBController.AddDiscoverDB(cards.Models.DiscoverDB)">
+            <summary>
+            Creates a discoverDB with a unique id
+            </summary>
+            <param name="discoverDB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.DiscoverDBController.DeleteDiscoverDB(System.String)">
+            <summary>
+            Deletes a discoverDB using a unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.DiscoverDBController.AddToDiscoverDB(System.String,System.String)">
+            <summary>
+            Appends items to discoverDB using a specific id
+            </summary>
+            <param name="id"></param>
+            <param name="cardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.PurchaseCreditDBController.GetPurchaseCredit">
+            <summary>
+            Gets all Purchase creditDB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.PurchaseCreditDBController.AddPurchaseCredit(cards.Models.PurchaseCreditDB)">
+            <summary>
+            Creates a purchaseCreditDB with a unique key
+            </summary>
+            <param name="purchaseCredit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.PurchaseCreditDBController.DeletePurchaseCredit(System.String)">
+            <summary>
+            Deletes a purchaseCreditDB using a unique key
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.PurchaseCreditDBController.AddToPurchaseCredit(System.String,System.String)">
+            <summary>
+            Appends to a purchase creditDB using a unique key
+            </summary>
+            <param name="id"></param>
+            <param name="purchaseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.StoreDBController.GetStoreDB">
+            <summary>
+            Gets a storeDB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.StoreDBController.AddStoreDB(cards.Models.StoreDB)">
+            <summary>
+            Creates a storeDB with a unique key
+            </summary>
+            <param name="storeDB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.StoreDBController.DeleteStoreDB(System.String)">
+            <summary>
+            Deletes a storeDB using a unique key
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cards.Controllers.StoreDBController.AddToStoreDB(System.String,System.String)">
+            <summary>
+            Appends to storeDB using a unique key
+            </summary>
+            <param name="id"></param>
+            <param name="storeDBId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -19,17 +19,20 @@ namespace cards.Services
 
         }
 
+        //Create Card
         public async Task CreateCard(CardDB card)
         {
             await _cardCollection.InsertOneAsync(card);
             return;
         }
 
+        //Get CardDB
         public async Task<List<CardDB>> GetCardDB()
         {
             return await _cardCollection.Find(new BsonDocument()).ToListAsync();
         }
 
+        //Add to CardDB
         public async Task AddToCardDB(string id, string CardId)
         {
             FilterDefinition<CardDB> filter = Builders<CardDB>.Filter.Eq("Id", id);
@@ -38,6 +41,7 @@ namespace cards.Services
             return;
         }
 
+        //Delete from CardDB
         public async Task DeleteCardDB(string id)
         {
             FilterDefinition<CardDB> filter = Builders<CardDB>.Filter.Eq("Id", id);

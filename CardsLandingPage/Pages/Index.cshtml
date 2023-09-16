@@ -1,11 +1,34 @@
 ﻿@page
 @model IndexModel
+@using CardsLandingPage.Models
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Index";
 }
-<div id="parallax">
-    <div class="content-div"> <h2>Div1</h2> </div>
-    <div class="content-div"> <h2>Div2</h2> </div>
-    <div class="content-div"> <h2>Div3</h2> </div>
-    <div class="content-div"> <h2>Div4</h2> </div>
+<div class="landing-page">
+    <div class="wrapper">
+        <h2>Micro<span class="danger">Serve</span></h2>
+        <form action="#">
+            <h2>Login</h2>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required>
+                <label>Enter your password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button href="/Dashboard" type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
 </div>

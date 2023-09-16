@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
 
 //AdminDashBoard Page
 const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content')
+const tabContents = document.querySelectorAll('[data-tab-content]')
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -26,4 +26,32 @@ tabs.forEach(tab => {
         tab.classList.add('active')
     })
 })
+
+//menu-btn toggle
+const sideMenu = document.querySelector("aside")
+const menuBtn = document.querySelector("#menu-btn")
+const closeBtn = document.querySelector("#close-btn")
+const themeToggler = document.querySelector('.theme-toggler')
+
+menuBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'block';
+    console.log("Hit");
+})
+
+
+
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
+
+})
+
+//change theme
+themeToggler.addEventListener('click', () => {
+    document.body.classList.toggle('dark-themes-variables');
+
+    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+})
+
+
 

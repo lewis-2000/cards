@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CardsLandingPage.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fonts/fontawesome-free-6.4.2-web/css/all.css" />
+    <link rel="stylesheet" href="/css/shop1.css" />
+    <link rel="stylesheet" href="/css/loginSignup.css" />
 </head>
 <body>
-    <div class="page-container">
-        <main role="main" class="pb-3">
+
             @RenderBody()
-        </main>
-    </div>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/fonts/fontawesome-free-6.4.2-web/js/all.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
